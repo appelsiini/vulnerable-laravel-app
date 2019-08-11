@@ -1,0 +1,31 @@
+version: '3.7'
+
+services:
+  web:
+    container_name: laracon-nginx
+    image: nginx:1.10
+    ports:
+      - 1234:80
+    volumes:
+      - ./docker/nginx/:/etc/nginx/conf.d:cached
+      - .:/var/www/html:cached
+
+  app:
+    container_name: laracon-app
+    ports:
+      - 33061:3306
+    build:
+      context: .
+    volumes:
+      - .:/var/www/html:cached
+      - ./docker/www.conf:/usr/local/etc/php-fpm.d/www.conf
+      - ./docker/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+
+  database:
+    image: mysql:5.7
+    container_name: laracon-database
+    environment:
+      - "MYSQL_USER=laracon"
+      - "MYSQL_PASSWORD=password"
+      - "MYSQL_DATABASE=laracon_amsterdam"
+      - "MYSQL_ROOT_PASSWORD=password"
