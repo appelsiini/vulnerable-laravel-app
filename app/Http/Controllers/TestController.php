@@ -2,15 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
+use Illuminate\Http\Request;
 use Illuminate\Filesystem\Filesystem;
 
 class TestController extends Controller
 {
-    public function test(Filesystem $fileSystem)
+    public function test(Request $request, Filesystem $fileSystem)
     {
-        $file       = 'phar:///var/www/html/public/uploads/monni-exploit.jpeg';
-        $fileExists = $fileSystem->size($file);
+        try {
+            file_get_contents('phar://uploads/monni-exploit.jpeg');
+        } catch (Exception $exception) {
+            //
+        }
 
-        return $fileExists ? 1 : 0;
+        return 1;
     }
 }

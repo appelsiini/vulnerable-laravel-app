@@ -12,8 +12,6 @@ services:
 
   app:
     container_name: laracon-app
-    ports:
-      - 33061:3306
     build:
       context: .
     volumes:
