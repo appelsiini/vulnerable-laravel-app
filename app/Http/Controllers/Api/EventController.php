@@ -15,7 +15,7 @@ class EventController extends Controller
         $orderParam = $request->get('sort');
 
         $events = $orderParam ?
-            DB::select(DB::raw("select * from events order by $orderParam desc")) :
+            Event::query()->orderByRaw($orderParam)->get() :
             Event::all();
 
         return response()->json($events);

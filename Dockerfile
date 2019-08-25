@@ -1,6 +1,6 @@
 FROM php:7.3-fpm-stretch AS base
 
-WORKDIR /app
+WORKDIR /var/www/html
 
 RUN rm /etc/apt/preferences.d/no-debian-php
 RUN apt-get update && apt-get install -y mariadb-client zlib1g-dev libfreetype6-dev libjpeg62-turbo-dev libpng-dev libxpm-dev libvpx-dev libmagickwand-dev zip libzip-dev php-soap vim netcat iputils-ping wget python cron \
