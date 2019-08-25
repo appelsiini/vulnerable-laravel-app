@@ -19,6 +19,7 @@ class GetFileDetails extends Controller
 
     public function __invoke(FileDetailsRequest $request)
     {
+        chdir('uploads');
         $fileName = $request->get('fileName');
 
         return response()->json([
