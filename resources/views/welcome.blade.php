@@ -32,10 +32,10 @@
         <div class="flex flex-col justify-around h-full text-center">
             <div>
                 <h1 class="text-black text-center tracking-wider text-6xl mb-6 font-heading font-black">
-                    Laracon Amsterdam 2019
+                    PHP Security Demonstration Demo App
                 </h1>
                 <span class="text-serif text-2xl font-light">
-                    Security Demonstration Demo App
+                    by Antti Rössi, @anamus_
                 </span>
             </div>
         </div>

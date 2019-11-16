@@ -1,5 +1,5 @@
 # Vulnerable Laravel App
-This application was used in my Laracon EU 2019 Amsterdam presentation to demonstrate the following vulnerabilities that are usually caused by poor development practises or mistakes in your code.
+This application was used in my Laracon EU 2019 Amsterdam and PHPCon Poland 2019 presentations to demonstrate the following vulnerabilities that are usually caused by poor development practises or mistakes in your code.
 
 **This application contains critical security vulnerabilities, DO NOT deploy or run this application outside of your localhost (or expose your localhost while running this)**
 
@@ -11,7 +11,7 @@ This application was used in my Laracon EU 2019 Amsterdam presentation to demons
 # Installation
 * `composer install`
 * `docker-compose up -d`
-* `docker exec laracon-app php artisan migrate --seed`
+* `docker exec vuln-app php artisan migrate --seed`
 
 # Vulnerabilities & tips
 ## SQL Injection

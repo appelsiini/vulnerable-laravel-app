@@ -19,7 +19,7 @@
                 <div class="flex items-center justify-center">
                     <div class="ml-6">
                         <a href="{{ url('/') }}" class="text-2xl font-black text-white no-underline">
-                            Laracon Demo
+                            Vulnerable PHP Demo App
                         </a>
                     </div>
                     <div class="flex-1 text-right font-heading font-bold">

@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   web:
-    container_name: laracon-nginx
+    container_name: vuln-nginx
     image: nginx:1.10
     ports:
       - 1234:80
@@ -11,7 +11,7 @@ services:
       - .:/var/www/html:cached
 
   app:
-    container_name: laracon-app
+    container_name: vuln-app
     build:
       context: .
     volumes:
@@ -21,9 +21,11 @@ services:
 
   database:
     image: mysql:5.7
-    container_name: laracon-database
+    ports:
+      - 33061:3306
+    container_name: vuln-database
     environment:
-      - "MYSQL_USER=laracon"
-      - "MYSQL_PASSWORD=password"
-      - "MYSQL_DATABASE=laracon_amsterdam"
-      - "MYSQL_ROOT_PASSWORD=password"
+      - "MYSQL_USER=almostroot"
+      - "MYSQL_PASSWORD=password123"
+      - "MYSQL_DATABASE=vulnerable_app"
+      - "MYSQL_ROOT_PASSWORD=password123"
