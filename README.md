@@ -1,7 +1,7 @@
 # Vulnerable Laravel App
-This application was used in my Laracon EU 2019 Amsterdam and PHPCon Poland 2019 presentations to demonstrate the following vulnerabilities that are usually caused by poor development practises or mistakes in your code.
+This application was used in anamus' conference presentations to demonstrate the following vulnerabilities that are usually caused by poor development practises or mistakes in your code.
 
-A record of the talk is available on [YouTube](https://www.youtube.com/watch?v=kKGGVGiq2y8).
+One of the talks recording is available at [YouTube](https://www.youtube.com/watch?v=kKGGVGiq2y8).
 
 **This application contains critical security vulnerabilities, DO NOT deploy or run this application outside of your localhost (or expose your localhost while running this)**
 
